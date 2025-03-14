@@ -90,7 +90,7 @@ namespace libraryManegement.Controllers
 
                 var users = await _context.Users.Include(u => u.Books)
               .Where(u => u.Books.Any())
-              .ToListAsync(); // Usar ToListAsync
+              .ToListAsync(); 
 
                 return Ok(users);
             }
